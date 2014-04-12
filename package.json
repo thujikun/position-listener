@@ -1,0 +1,17 @@
+{
+  "name": "jquery-position-listener",
+  "version": "1.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-jsdoc": "~0.5.1",
+    "grunt-closurecompiler": "~0.9.9",
+    "grunt-contrib-jshint": "~0.8.0",
+    "jshint-stylish": "~0.1.5",
+    "load-grunt-tasks": "~0.3.0",
+    "grunt-contrib-watch": "~0.5.3"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}
