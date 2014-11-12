@@ -1,0 +1,24 @@
+{
+  "name": "position-listener",
+  "version": "1.0.0",
+  "authors": [
+    "thujikun"
+  ],
+  "description": "add and remove scroll position listener",
+  "main": "src/jquery-position-listener.js",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "position",
+    "scroll"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
