@@ -159,7 +159,7 @@
 
     scrollHandler.init();
 
-    $window.on('position-listener-scroll', positionManager.execute.bind(positionManager));
+    $window.on('position-listener-scroll', $.proxy(positionManager.execute, positionManager));
 
     if (typeof define === 'function' && define.amd) {
         define('positionlistener', [], function() {
