@@ -17,17 +17,16 @@ module.exports = function(grunt) {
                 tasks: ['jsdoc']
             },
         },
-        closurecompiler: {
+        uglify: {
+            options: {
+                ascii_only: true,
+                preserveComments: 'some'
+            },
             minify: {
                 files: {
                     './src/jquery-position-listener.min.js': [
                         targetPath
                     ],
-                },
-                options: {
-                    'compilation_level': 'ADVANCED_OPTIMIZATIONS',
-                    'max_processes': 5,
-                    'banner': '',
                 }
             },
         },
@@ -54,10 +53,14 @@ module.exports = function(grunt) {
         }
     });
 
-    grunt.registerTask('default', [
+    grunt.registerTask('build', [
         'jshint',
-        'closurecompiler',
-        'jsdoc',
-        'watch',
+        'uglify',
+        'jsdoc'
+    ]);
+
+    grunt.registerTask('default', [
+        'build',
+        'watch'
     ]);
 };
