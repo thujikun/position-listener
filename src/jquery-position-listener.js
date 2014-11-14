@@ -152,7 +152,7 @@
                 $(this).data('jquery-position-listener-id', config.id);
             });
         },
-        removePositionTrigger: function(id) {
+        removePositionListener: function(id) {
             positionManager.removePositionListener(id);
         }
     });
