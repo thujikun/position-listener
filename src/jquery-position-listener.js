@@ -108,7 +108,13 @@
                 $element = $(listener.element);
                 elementTop = $element.offset().top;
                 top = elementTop - scrollTop;
-                border = windowHeight * listener.triggerPosition;
+
+                if (listener.triggerPosition < 0 || 1 < listener.triggerPosition) {
+                    border = elementTop + listener.triggerPosition;
+                } else {
+                    border = windowHeight * listener.triggerPosition;
+                }
+
                 viewRate = (windowHeight - top) / border;
 
                 if (!listener.isElementIn && 1 <= viewRate) {
