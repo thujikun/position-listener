@@ -111,11 +111,11 @@
 
                 if (listener.triggerPosition < 0 || 1 < listener.triggerPosition) {
                     border = elementTop + listener.triggerPosition;
+                    viewRate = scrollTop / border;
                 } else {
                     border = windowHeight * listener.triggerPosition;
+                    viewRate = (windowHeight - top) / border;
                 }
-
-                viewRate = (windowHeight - top) / border;
 
                 if (!listener.isElementIn && 1 <= viewRate) {
                     listenerQueue.push(this.getInListener(ids[i], listener));
